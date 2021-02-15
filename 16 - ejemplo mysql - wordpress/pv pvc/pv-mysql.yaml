@@ -1,0 +1,16 @@
+#####################
+## PV para MySQL  ###
+#####################
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-mysql
+spec:
+  capacity:
+    storage: 25Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: mysql
+  hostPath:
+    path: /home/kubernetes/datos/mysql

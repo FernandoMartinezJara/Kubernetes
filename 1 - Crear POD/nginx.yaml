@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx1
+  labels:
+    zone: prod
+    version: v1
+    ambiente: desa
+spec:
+  containers:
+   - name: nginx   
+     image: fernandomartinezjara/nginx:v1
